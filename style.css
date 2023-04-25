@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  background-color: cadetblue;
+  font-weight: 700;
+  color: #fff;
+  transform: translateX(500%);
+  transition: transform 0.3s ease;
+}
+
+.box:nth-child(even) {
+  transform: translateX(-500%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
